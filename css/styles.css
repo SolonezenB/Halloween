@@ -1,0 +1,147 @@
+/* Fondo general tenebroso */
+body.bg {
+  background: linear-gradient(180deg, #0b0b0b 0%, #1a1a1a 100%);
+  color: #f5f5f5;
+  font-family: "Creepster", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado con efecto de neblina */
+header {
+  text-align: center;
+  background: #111;
+  color: #ff7518;
+  padding: 20px;
+  border-bottom: 3px solid #ff7518;
+  text-shadow: 0 0 10px #ff7518;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Navegación */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff7518;
+  text-shadow: 0 0 10px #ff7518;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Tarjetas de disfraces */
+.card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #ff7518;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff7518;
+  width: 280px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff9d3a, 0 0 10px #ff7518 inset;
+}
+
+/* Imagen del disfraz */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ff7518;
+}
+
+/* Título y descripción */
+.card h2 {
+  color: #ff9d3a;
+  margin-top: 10px;
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.4em;
+}
+
+/* Sección de votos */
+.votos {
+  color: #ff7518;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Botón de votar */
+button {
+  background: #ff7518;
+  color: #111;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff9d3a;
+  box-shadow: 0 0 10px #ff7518;
+  transform: scale(1.1);
+}
+
+/* Enlace para iniciar sesión */
+a {
+  color: #ff9d3a;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Fuente espeluznante */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Animación sutil de fondo */
+@keyframes fog {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+body.bg {
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  animation: fog 120s linear infinite;
+}
+
+/* Pequeño efecto parpadeante */
+header h1::after {
+  content: " 💀";
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
